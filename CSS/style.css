@@ -84,7 +84,8 @@ h1 {
   text-align: left;
   color: $bordo;
   animation-duration: 2s;
-  animation-name: show; }
+  animation-name: show;
+}
 
 @keyframes show {
   0% {
@@ -128,20 +129,7 @@ h4 {
   align-items: center;
   justify-content: left; }
 
-/**.col-inicio{
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    grid-template-rows: 100px 200px;
-}
 
-.col-inicio2{
-    display: flex;     
-    flex-direction: column; 
-    justify-content: flex-end;
-    height: 300px;
-    grid-template-rows: 100px 200px;
-}**/
 .quienesSomos {
   display: flex;
   flex-direction: column;
@@ -149,19 +137,7 @@ h4 {
   text-align: center;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1); }
 
-/*#valores-container{
-    padding-top: 100px;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-#quienesSomos img{
-    width: 30%;
-    text-align: center;
-} 
-*/
+
 .productos {
   background-color: #CD7BAC;
   padding-top: 100px;
