@@ -117,17 +117,18 @@ h4 {
   text-align: left; }
 
 /*BLOQUE*/
-.inicio__texto {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  flex-direction: row;
-  display: grid; }
+.inicio__texto{
+  padding: 100px 50px;
+  display: grid;
+}
 
-.row-inicio {
+.row-inicio{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left; }
+  justify-content: left;
+  padding: 100px 50px;
+}
 
 
 .quienesSomos {
@@ -135,13 +136,15 @@ h4 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1); }
+  background: #fff;
+  padding: 100px 50px;
+  overflow: hidden;
+} 
 
 
 .productos {
   background-color: #CD7BAC;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 100px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,11 +161,26 @@ h4 {
 .images .col-md-3 {
   padding-top: 20px; }
 
-.preciosTabla {
+/*Valores*/
+.valores {
+  background-color: #fff;
+  padding: 100px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-color: #c93d91; }
+  text-align: center; }
+
+.valores img {
+  width: 30%;
+  text-align: center; }
+
+.row-images {
+  display: flex;
+  flex-direction: row;
+}
+
+.images .col-md-9 {
+  padding-top: 30px; }
 
 .galeria {
   text-align: center;
@@ -191,6 +209,48 @@ h4 {
 .row-imagesGalery {
   display: flex;
   flex-direction: row; }
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 200%;
+  }
+
+  .container {
+    width: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+  
+  .btn {
+    margin: 20px auto;
+    border: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    position: relative;
+  }
+  .btn::before {
+    -webkit-transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: #6d1940;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .btn .btn-text {
+    color: #CD7BAC;
+    mix-blend-mode: difference;
+  }
+  .btn:hover::before {
+    background: #6d1940;
+    width: 100%;
+  }
+  
 
 #team {
   background: #fff;
@@ -244,34 +304,81 @@ h4 {
   color: #fff; }
 
 footer {
-  background-color: #CD7BAC;
-  background-image: linear-gradient(to right, #c93d91, #ca95b5);
-  border-top: groove;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 100px 0; }
+  background: #CD7BAC;
+  padding: 0 0 30px 0;
+  color: #6d1940;
+  font-size: 14px;
+}
 
-.contacto {
-  text-align: left;
-  font-size: 30px; }
+#footer .footer-top {
+  background: #CD7BAC;
+  padding: 60px 0 30px 0;
+}
 
-.formulario {
-  text-align: right;
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 34px;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  color: #6d1940;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: #ecf5ff;
+}
+
+#footer .footer-top .social-links a {
   font-size: 18px;
-  margin-right: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  align-items: right; }
+  display: inline-block;
+  background:#6d1940;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
 
-.input {
-  width: 100px;
-  height: 100px;
-  transition: all 2s; }
+#footer .footer-top .social-links a:hover {
+  background: #CD7BAC;
+  color: #fff;
+}
 
-.input:focus {
-  width: 200px;
-  font-size: 24px; }
+#footer .footer-top h4 {
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  color: #6d1940;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+}
 
-/*VARIABBLES*/
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+

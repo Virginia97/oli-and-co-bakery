@@ -122,8 +122,7 @@ h4{
 
 /*BLOQUE*/
 .inicio__texto{
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding: 100px 50px;
     flex-direction: row;
     display: grid;
 }
@@ -133,46 +132,37 @@ h4{
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    padding: 100px 50px;
 }
 
-
-
-/**.col-inicio{
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    grid-template-rows: 100px 200px;
-}
-
-.col-inicio2{
-    display: flex;     
-    flex-direction: column; 
-    justify-content: flex-end;
-    height: 300px;
-    grid-template-rows: 100px 200px;
-}**/
  
 .quienesSomos{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 100px 100px 50px 50px;
+    overflow: hidden;
 }
-
-/*#valores-container{
-    padding-top: 100px;
-    padding-bottom: 50px;
+.valores {
+    background-color: #fff;
+    padding: 100px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-}
-#quienesSomos img{
+    text-align: center; }
+  
+  .valores img {
     width: 30%;
-    text-align: center;
-} 
-*/
+    text-align: center; }
+  
+  .row-images {
+    display: flex;
+    flex-direction: row; }
+  
+  .images .col-md-3 {
+    padding-top: 20px; }
 
 .productos{
     background-color: #CD7BAC;
@@ -197,13 +187,6 @@ h4{
 
 }
 
-.preciosTabla{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-color: #c93d91;
-}
-
 .galeria{
     @include galeria;
 }
@@ -226,9 +209,59 @@ h4{
 }
 .row-imagesGalery{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  
 }
+.valores img {
+    width: 30%;
+    text-align: center; }
+  
+  .row-images {
+    display: flex;
+    flex-direction: row; }
+  
+  .images .col-md-9 {
+    padding-top: 20px; }
 
+.container {
+    width: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+  
+  .btn {
+    margin: 20px auto;
+    border: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    position: relative;
+  }
+  .btn::before {
+    -webkit-transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: #6d1940;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .btn .btn-text {
+    color: #CD7BAC;
+    mix-blend-mode: difference;
+  }
+  .btn:hover::before {
+    background: #6d1940;
+    width: 100%;
+  }
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    }
 
 #team {
     background: #fff;
@@ -289,33 +322,35 @@ h4{
     color: #fff;
 }
 
-footer{
-    @include footer;
-} 
-.contacto{
-    text-align: left;
+footer {
+    background: #CD7BAC;
+    padding: 0 0 30px 0;
+    color: #eee;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+.fa {
+    padding: 20px;
     font-size: 30px;
-}
-.formulario{
-    text-align: right;
-    font-size: 18px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: right;
-}
-.input{
-    width: 100px; height: 100px;
-    transition: all 2s;       
-}
-.input:focus{
-    width: 200px;
-    font-size: 24px;
- }
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+.fa:hover {
+    opacity: 0.7;
+  }
+
+.fa-instagram {
+    background: #6d1940;
+    color: white;
+  }  
 
  /*VARIABLES*/
- $bordo: #862424;
+ $bordo: #862424; 
  $fucsia: #6d1940;
  $rosa: #CD7BAC;
  $fondo: true;
@@ -343,19 +378,10 @@ footer{
     justify-content: center;
 }
 
-@mixin footer {
-    background-color: #CD7BAC;
-    background-image: linear-gradient(to right, #c93d91, #ca95b5);
-    border-top: groove;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 100px 0;
-}
 
 body{
     @if $fondo == true {
-        background-color: #eeeee;
+        background-color: white;
         } @else {
             background-color: black;
         }

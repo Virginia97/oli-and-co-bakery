@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <meta name="keywords" content="Pasteleria, Tortas, Desayunos, Meriendas, Lunch, Dulces, Snack Boxes, Picadas">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Nunito&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
@@ -23,11 +25,14 @@
             <nav class="main-nav float-right d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Inicio</a></li>
-          <li><a href="#quienesSomos">Quienes Somos</a></li>
-          <li><a href="#productos">Nuestros Productos</a></li>
-          <li><a href="#galeria">Galeria</a></li>
+          <li class="dropdown">
+            <a href="quienes-somos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Quienes Somos</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="nuestros-valores.html">Nuestros Valores</a></li>
+            </ul>
+          <li><a href="nuestros-productos.html">Nuestros Productos</a></li> 
           <li><a href="#team">Team</a></li>
-          <li><a href="#contacto">¡Contactanos!</a></li>
+          <li><a href="#footer">¡Contactanos!</a></li>
         </ul>
       </nav>
          </div>
@@ -36,27 +41,25 @@
     </header>
 
     <!--INICIO-->
-    <section>
-        <div class= "container" id="inicio">
-            <div class="row-inicio">
-                <div class="col-12 col-md-8">
-                    <h1 class=" text-left mb-8">Oli & CO Bakery</h1>
-                    <h4>¡Creamos Cupcakes para todos los gustos!</h4>
-                </div>
-                    <div class="col-12 col-md-4">
-                    <img src="images/trio-cupcake.png" alt="Inicio">
-                 </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class= "container" id="inicio">
+      <div class="row-inicio">
+          <div class="col-12 col-md-8">
+              <h1 class=" text-left mb-8">Oli & Co Bakery</h1>
+              <h4>¡Creamos Cupcakes para todos los gustos!</h4>
+          </div>
+              <div class="col-12 col-md-4">
+              <img src="images/trio-cupcake.png" alt="Inicio">
+           </div>
+          </div>
+      </div>
+  </div>
+
 
     <!--QUIENES SOMOS-->
-    <section>
-        <div class= "container" id "quienesSomos">
-            <h2 class="animate__animated animate__zoomIn">Quienes Somos</h2>
-            <p>Somos un emprendimiento familiar dedicado al rubro de la pasteleria. Nuestro objetivo es brindar calidad
-                y sabor a todos nuestros productos</p>
+    <section id="quienesSomos">
+        <div class= "container" id "quienesSomos"></div>
+            <h2 class="animate__animated animate__zoomIn" style="text-align:center">Quienes Somos</h2>
+            <h5>Somos un emprendimiento familiar dedicado al rubro de la pasteleria. Nuestro objetivo es brindar calidad y sabor a todos nuestros productos</h5>
         </div>
 
         
@@ -90,7 +93,6 @@
                     <img src="images/snacks.png" alt="">
                     <h3>Snack Box</h3>
                     <p>Tambien ofrecemos un pack de picadas para aquellos fans de lo salado.</p>
-                    <a href="precios.html"><input type="button" value="Precios"></a>
                 </div>
             </div>
     </section>
@@ -104,10 +106,14 @@
                 </div>
             </div>
             <div class="row-galery">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-10">
                 <h2 class="animate__animated animate__zoomIn">Galería</h2>
                 <h3>¡Visita nuestra galeria para ver todos nuestros productos!</h3>
-                <a href="galeria.html"><input type="button" value="Ver más"></a>
+                <div class="col-12 col-md-10"> 
+                <div class="container">
+                 <a href="galeria.html"> <button class="btn <span class="btn-text">Ver más</span></button></a>
+                </div>
+                </div>  
                 </div>
             </div>
         </div>
@@ -126,7 +132,7 @@
       
                 <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
                   <div class="member">
-                    <img src="Images/member1.png" class="img-fluid" alt=""> <!--Agregar -->
+                    <img src="Images/member1.png" class="img-fluid" alt=""> 
                     <div class="member-info">
                       <div class="member-info-content">
                         <h4>Marta Olivares</h4>
@@ -177,45 +183,48 @@
             </div>
           </section>
 
-    <!--FOOTER-->   
-    <footer>
-        <div class=" container contacto" id="contacto">
-            <div class="row">
-            <div class="col-12 col-mb-2">
-            <h2>Contacto</h2>
-                <p>¡Hacenos tu consulta, estamos a dispocisión!.</p>
-                <p>Nuestras redes:</p>
-                <div class="col-12 col-md-6 col-xl-3">
-                <img src="images/instagram-logo.png" width="60" height="60" alt="Instagram">
-                <img src="images/facebook-logo.png" width="60" height="60" alt="Facebook">
-                <img src="images/whatsapp-logo.png" width="50" height="50" alt="Whatsapp">
-                </div> 
+   <!--FOOTER-->       
+        <footer id="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+        
+                  <div class="col-lg-6 col-md-6 footer-info">
+                    <h3>¡Contactanos!</h3>
+                    <p>Hacenos la consulta que necesites. ¡Estamos a tu disposición! Tambien podes seguirnos en nuestras redes sociales.</p>
+                  </div>
+        
+                  <div class="col-lg-6 col-md-6 footer-info">
+                    <h4>Nuestras Redes</h4>
+                    <p>
+                      <strong>Teléfono:</strong> +54 1131290979<br>
+                      <strong>Email:</strong> oli&cobakery@gmail.com<br>
+                    </p>
+        
+                    <div class="social-links">
+                      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                      <a href="#" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+        
+                  </div>
+        
+                </div>
+              </div>
             </div>
-           </div>
-         </div>
+        
+            <div class="container">
+              <div class="copyright">
+                &copy; 2020 Copyright <strong>Virginia Sanchez</strong>.
+              </div>
+            </div>
+          </footer>     
 
-         <!--FORM-->
-        <div class="container formulario" id="formulario">
-            <div class="row">
-            <div class="col-12 col-md-10">
-            <form action="#" method="POST">
-                <div>Nombre:</div>
-                <input type="text" placeholder="Nombre:">
-                <div>E-mail o número de celular:</div>
-                <input type="text" placeholder="E-mail o número de celular:">
-                <div>Consultas:</div>
-                <textarea name="consulta" id="consulta" cols="30" rows="10"></textarea>
-                <div>¡Acepto!</div>
-                <input type="checkbox" name="acepta" value="1">
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Reset">
-            </form>
-           </div>
-           </div>
-          </div>
-    </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
